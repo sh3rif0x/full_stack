@@ -7,10 +7,11 @@ app.use(cors())
 app.use(express.json())
 const port = 3000
 const connection = mysql.createConnection({
-    database: "full",
-    user: "root",
-    password: "root",
-    host: "localhost"
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT
 })
 app.use(cookieParser())
 connection.connect((err) => {
@@ -54,7 +55,7 @@ app.post("/login", (req, res) => {
 
 app.post("/register", (req, res) => {
     if (!req.body || req.body == undefined) {
-        return res.status(400).send("body is required")
+        return res.loginstatus(400).send("body is required")
         return
     }
     const username = req.body.username;
