@@ -13,7 +13,10 @@
     <button onclick="login()">login</button>
 </body>
 <script>
-    async function login() {
+       const config = {
+        API_URL: "https://fullstack-sh3rif0x9907-4qfsgwmj.leapcell.dev"
+    };
+ async function login() {
         const username = document.getElementById("username").value
         const res = await fetch(`${config.API_URL}/login`, {
             method: "POST",
