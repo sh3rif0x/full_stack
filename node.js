@@ -1,0 +1,1 @@
+await Promise.all([task1(), task2()]);
