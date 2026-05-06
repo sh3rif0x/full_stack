@@ -7,7 +7,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use(cookieParser())
-const port = 3000
+const port = 8080
 
 const connection = mysql.createConnection({
     host: process.env.DB_HOST,
