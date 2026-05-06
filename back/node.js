@@ -1,5 +1,6 @@
 const express = require("express")
 const cors = require("cors")
+require("dotenv").config()
 const mysql = require("mysql2")
 const cookieParser = require("cookie-parser")
 const app = express()
