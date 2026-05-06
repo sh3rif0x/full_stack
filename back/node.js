@@ -58,5 +58,5 @@ app.post("/register", (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Running on http://localhost:${port}`)
+    console.log(`Running on ${process.env.DB_HOST}`)
 })
